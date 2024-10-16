@@ -1,6 +1,7 @@
 import os
 from google.cloud import storage, dataproc_v1
 import argparse
+from credentials import credentials
 
 # Function to parse command-line arguments
 def parse_args():
@@ -59,7 +60,7 @@ def submit_pyspark_job(dataproc_client, project_id, region, cluster_name, job_fi
 
     print("Job finished successfully:", job_response.driver_output_resource_uri)
 
-if __name__ == "__main__":
+def submitjob():
     # Parse command-line arguments
     args = parse_args()
 
